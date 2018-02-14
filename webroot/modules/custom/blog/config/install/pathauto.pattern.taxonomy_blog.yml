@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+    - taxonomy
+id: taxonomy_blog
+label: 'taxonomy blog'
+type: 'canonical_entities:taxonomy_term'
+pattern: 'taxonomy/term/[term:name]'
+selection_criteria:
+  ba3fbfb5-6504-472e-9dc4-7fe0cd20aaf9:
+    id: 'entity_bundle:taxonomy_term'
+    bundles:
+      blog_categories: blog_categories
+    negate: false
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    uuid: ba3fbfb5-6504-472e-9dc4-7fe0cd20aaf9
+selection_logic: and
+weight: -5
+relationships: {  }

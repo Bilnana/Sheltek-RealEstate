@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+name: Location
+vid: location
+description: 'Taxonomy for location'
+hierarchy: 1
+weight: 0

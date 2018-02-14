@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.comment_sheltek
+    - field.storage.comment.field_your_name
+id: comment.comment_sheltek.field_your_name
+field_name: field_your_name
+entity_type: comment
+bundle: comment_sheltek
+label: 'Your name'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

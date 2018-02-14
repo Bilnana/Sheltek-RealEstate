@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: get_in_touch
+label: 'Get in touch'
+revision: 0
+description: 'Basic block for information footer block.'

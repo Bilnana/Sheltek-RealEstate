@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: comment_sheltek_review
+label: 'Comment Sheltek Review'
+target_entity_type_id: node
+description: 'Comment type for property'

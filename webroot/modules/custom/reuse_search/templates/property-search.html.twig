@@ -1,0 +1,28 @@
+{{ form.form_build_id }}
+{{ form.form_token }}
+{{ form.form_id }}
+
+<div class="">
+    <h5>Search For Property</h5>
+</div>
+
+<div class="search-block">
+    <div class="inputs-blocks">
+        {{ form.filters.location }}
+        {{ form.filters.sort }}
+        {{ form.filters.bathsort }}
+        {{ form.filters.min }}
+        {{ form.filters.max }}
+        <div class="range">
+            <p>
+                <label for="amount">Price range:</label>
+                <input type="text" id="amount">
+            </p>
+            <div id="slider-range"></div>
+            {{ form.filters.min_price }}
+            {{ form.filters.max_price }}
+        </div>
+
+        {{ form.filters.actions.submit }}
+    </div>
+</div>

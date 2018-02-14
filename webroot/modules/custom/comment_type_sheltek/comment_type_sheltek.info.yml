@@ -1,0 +1,7 @@
+name: 'Comment type sheltek'
+type: module
+core: 8.x
+dependencies:
+  - comment
+  - field
+version: 8.x-1.4

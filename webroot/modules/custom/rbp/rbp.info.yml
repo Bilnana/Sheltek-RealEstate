@@ -1,0 +1,5 @@
+name: Recent Blog post
+description: Recent blog post block
+type: module
+core: 8.x
+package: custom

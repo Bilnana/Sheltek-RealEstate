@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.get_in_touch
+    - field.storage.block_content.field_telephone1
+  module:
+    - telephone
+id: block_content.get_in_touch.field_telephone1
+field_name: field_telephone1
+entity_type: block_content
+bundle: get_in_touch
+label: Telephone
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone

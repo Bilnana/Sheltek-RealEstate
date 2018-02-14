@@ -1,0 +1,37 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.comment_sheltek_review
+    - field.field.comment.comment_sheltek_review.field_write_here
+    - field.field.comment.comment_sheltek_review.field_your_email
+    - field.field.comment.comment_sheltek_review.field_your_name2
+id: comment.comment_sheltek_review.default
+targetEntityType: comment
+bundle: comment_sheltek_review
+mode: default
+content:
+  field_write_here:
+    weight: 0
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_your_email:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_your_name2:
+    weight: 2
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  links: true

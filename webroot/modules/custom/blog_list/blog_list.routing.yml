@@ -1,0 +1,7 @@
+blog_list.content:
+  path: 'blog'
+  defaults:
+    _controller: '\Drupal\blog_list\Controller\BlogListController::content'
+    _title: 'Blog'
+  requirements:
+    _permission: 'access content'

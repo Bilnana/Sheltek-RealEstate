@@ -1,0 +1,13 @@
+langcode: en
+status: true
+dependencies: {  }
+name: image_service_561x408_
+label: 'image service(561x408)'
+effects:
+  c15195dc-255c-403d-92bd-a728d1c3a241:
+    uuid: c15195dc-255c-403d-92bd-a728d1c3a241
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 561
+      height: 408

@@ -1,0 +1,11 @@
+name: 'Partner slider'
+description: 'Image slider with partner image.'
+type: module
+core: 8.x
+dependencies:
+  - block_content
+  - field
+  - file
+  - image
+  - text
+version: 8.x-1.1

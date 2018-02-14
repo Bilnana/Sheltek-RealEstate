@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: video_banner
+label: 'Video banner'
+revision: 0
+description: 'Video on site block type.'

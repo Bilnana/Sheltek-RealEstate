@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.comment_sheltek_review
+    - field.storage.comment.field_write_here
+id: comment.comment_sheltek_review.field_write_here
+field_name: field_write_here
+entity_type: comment
+bundle: comment_sheltek_review
+label: 'Write here'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

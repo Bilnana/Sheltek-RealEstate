@@ -1,0 +1,7 @@
+name: 'Blog Categories'
+description: 'Blog taxonomy field.'
+type: module
+core: 8.x
+dependencies:
+  - field
+  - taxonomy

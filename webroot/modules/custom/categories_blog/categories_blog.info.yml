@@ -1,0 +1,5 @@
+name: Categories blog
+description: Bock for categories on blog detail page.
+package: Custom block
+type: module
+core: 8.x

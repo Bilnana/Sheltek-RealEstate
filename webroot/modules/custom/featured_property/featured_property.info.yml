@@ -1,0 +1,5 @@
+name: Featured propety
+description: Featured property tha is going to be placed on porperty detail page.
+package: Custom block
+type: module
+core: 8.x

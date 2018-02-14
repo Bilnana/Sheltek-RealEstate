@@ -1,0 +1,186 @@
+// ========================================
+//
+// @file _navigation.scss
+// All the navigation elements on the page
+//
+// ========================================
+//** Site navigation include in banner position absolute,hero section relative
+.site-navigation{
+  background: $navigation;
+  width: 100%;
+  position: absolute;
+  top:0;
+  z-index: 10;
+  @include padding;
+  .block-system-branding-block{
+    display: none;
+  }
+  .menu-mobile{
+    display: none;
+  }
+}
+.site-navigation.fixed{
+  background: white;
+  width: 100%;
+  position: fixed;
+  top:0;
+  z-index: 100;
+  height:54px;
+  background: $color-white;
+  box-shadow: 0 1px 3px rgba(50, 50, 50, 0.4);
+  @include clearfix;
+  .block-system-branding-block{
+    display:inline-block;
+    width: 76px;
+    float: left;
+    padding-top:10px;
+    padding-left: 15px;
+  }
+  .menu{
+    text-align: right;
+    display: inline-block;
+    width:80%;
+    float: right;
+    padding-right:15px;
+    .menu-item{
+      padding: 17px 0;
+    }
+    a{
+      color: #303030;
+      font-size: 14px;
+      padding: 18px 0;
+      font-weight: 600;
+    }
+    .menu-item--expanded.fix{
+      //height:55px;
+      position:relative;
+      ul {
+        position: absolute;
+        top: 54px;
+        left:0;
+        width: 250px;
+        text-align: left;
+        li{
+          padding: 8px 20px;
+        }
+        }
+      }
+  }
+}
+
+//** Real Estate Menu desktop version
+.menu--real-state-menu{
+  margin: auto;
+  .menu{
+    display: block;
+    text-align: center;
+    margin-left: 0;
+    margin-top:0;
+    margin-bottom:0;
+    height:54px;
+    li{
+      display: inline-block;
+      margin-left: 55px;
+      padding: 19px 0;
+      a{
+        text-decoration: none;
+        font-size: 16px;
+        text-transform: uppercase;
+        color: #fff;
+        font-weight: 600;
+      }
+      a:hover{
+        color: $green-button;
+        transition: all 0.3s ease-out 0s;
+      }
+  }
+    li:first-child{
+      margin-left: 0;
+    }
+
+  }
+  //** Expanded menu desktop version
+  .menu-item--expanded{
+    position: relative;
+    height:55px;
+    ul {
+      position: absolute;
+      top: 54px;
+      width: 250px;
+      height:auto;
+      background: #ffffff none repeat scroll 0 0;
+      border-bottom: 4px solid $green-button;
+      text-align: left;
+      box-shadow: 0 1px 2px rgba(86, 86, 90, 0.5);
+      transform: scaleY(0);
+      transform-origin: 0 0 0;
+      transition: all 0.3s ease 0s;
+      visibility: hidden;
+      li {
+        border-bottom: 1px solid #e1e1e1;
+        display: block;
+        margin: 0;
+        padding: 8px 20px;
+        a {
+          color: $navigation;
+          font-size: 12px;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+
+  //** Expanded menu :hover
+  .menu-item--expanded:hover {
+    ul{
+      transform: scale(1);
+      visibility: visible;
+      a:hover{
+        color:$green-button;
+      }
+    }
+  }
+}
+
+.scroll-logo{
+  //display: none;
+}
+
+
+
+
+
+/********** RESPONSIVE ****************/
+@media (max-width: $screen-xs) and (min-width: 320px) {
+  #block-sitebranding{
+    display: none;
+  }
+  .site-navigation{
+    background: $green-button;
+    position:relative;
+  }
+  .mean-container, .mean-nav ul{
+    width: 100%;
+    margin: auto;
+  }
+  .menu--real-state-menu{
+   display: none;
+  }
+}
+
+@media (max-width: $screen-sm) and (min-width: $screen-xs) {
+  #block-sitebranding{
+    display: none;
+  }
+  .site-navigation{
+    background: $green-button;
+    position:relative;
+  }
+  .mean-container, .mean-nav ul{
+    width: 60%;
+    margin: auto;
+  }
+  .menu--real-state-menu{
+    display: none;
+  }
+}

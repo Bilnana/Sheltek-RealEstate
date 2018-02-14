@@ -1,0 +1,10 @@
+name: 'Get in touch'
+description: 'Get int touch custom block.'
+type: module
+core: 8.x
+dependencies:
+  - block_content
+  - field
+  - link
+  - telephone
+version: 8.x-1.1

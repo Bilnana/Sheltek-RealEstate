@@ -1,0 +1,10 @@
+{% for entry in content %}
+    <a href ="{{ entry.nid }}"><img src="{{ entry.image }}"/></a>
+    <div class="block-title">
+        <a href ="{{ entry.nid }}"><h2>{{ entry.title }}</h2></a>
+    </div>
+    <div class = "block-body">
+        {{ entry.body }}
+    </div>
+{% endfor %}
+

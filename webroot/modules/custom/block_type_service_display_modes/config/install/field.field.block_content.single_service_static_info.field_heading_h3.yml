@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.single_service_static_info
+    - field.storage.block_content.field_heading_h3
+id: block_content.single_service_static_info.field_heading_h3
+field_name: field_heading_h3
+entity_type: block_content
+bundle: single_service_static_info
+label: 'Heading h3'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

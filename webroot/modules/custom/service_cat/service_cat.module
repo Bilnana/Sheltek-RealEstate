@@ -1,0 +1,18 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: stefan
+ * Date: 26.12.17.
+ * Time: 09.29
+ */
+function service_cat_theme(){
+    return [
+        'service_cat' => array(
+            'template' => 'service_cat',
+            'variables' => [
+                'content' => [],
+            ],
+        ),
+
+    ];
+}

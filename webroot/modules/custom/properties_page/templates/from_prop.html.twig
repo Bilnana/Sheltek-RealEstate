@@ -1,0 +1,30 @@
+<div class="our-services">
+    <div class="section-title">
+        <h2>Featured property</h2>
+        <p>Sheltek is the best theme for  elit, sed do eiusmod tempor dolor sit amet, conse ctetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et lorna aliquatd minim veniam, quis nostrud</p>
+    </div>
+</div>
+<div class="blog-list-wraper">
+    {% for entry in content.sale %}
+        <div class="property-wrap">
+            <div class = "image-wraper">
+                <span class="for-sale">{{ entry.term }}</span>
+                <a href="{{ entry.nid }}"><div class="image-wraper"><img src="{{ entry.image }}"/></div></a>
+                <div class="link-readmore">
+                    <a class = "read-more" href = "{{ entry.nid }}">Read more</a>
+                </div>
+                <ul class="flat-desc">
+                    <li class="area">{{ entry.area }}</li>
+                    <li class="bed">{{ entry.bed }}</li>
+                    <li class="bath">{{ entry.bath }}</li>
+                </ul>
+            </div>
+            <div class="property-info">
+                <h5 class="info-title"><a href="{{ entry.nid }}">{{ entry.title }}</a></h5>
+                <span class="price">{{ entry.price }}</span>
+                <p class="adress">{{ entry.address }}</p>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+

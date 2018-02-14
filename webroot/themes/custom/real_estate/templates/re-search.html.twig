@@ -1,0 +1,53 @@
+
+{{ form.form_build_id }}
+{{ form.form_token }}
+{{ form.form_id }}
+
+{#<div class="search-block">#}
+    {#<div class="inputs-block">#}
+            {#{{ form.filters.location }}#}
+            {#{{ form.filters.min }}#}
+            {#{{ form.filters.max }}#}
+             {#{{ form.filters.sort }}#}
+        {#{{ form.filters.bathsort }}#}
+
+        {#<div class="range">#}
+            {#<p>Range</p>#}
+            {#{{ form.filters.min_price }}#}
+            {#{{ form.filters.max_price }}#}
+        {#</div>#}
+
+        {#{{ form.filters.actions.submit }}#}
+    {#</div>#}
+{#</div>#}
+
+
+{#{{ render_block('featuredproperty') }}#}
+{#{{ render_block('takealook') }}#}
+
+
+<!-- Result page from search -->
+<div class = "property-sale">
+    {% for entry in form['#content'].data %}
+        <div class="item-wrap">
+            <div class="image-wraper bg-service">
+                <a href="{{ entry.nid }}"><img src="{{ entry.image }}"></a>
+                <div class="link-readmore">
+                    <a href="{{ entry.nid }}">More Details</a>
+                </div>
+                <ul class="flat-desc">
+                    <li class="area">{{ entry.area }}</li>
+                    <li class="bed">{{ entry.bed }}</li>
+                    <li class="bath">{{ entry.bath }}</li>
+                </ul>
+
+            </div>
+            <div class="property-info">
+                <h5 class="info-title"><a href="{{ entry.nid }}">{{ entry.nas}}</a></h5>
+                <span class="price">{{ entry.price }}</span>
+                <p class="adress">{{ entry.address }}</p>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+{{ form.pager }}

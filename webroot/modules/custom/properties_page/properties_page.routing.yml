@@ -1,0 +1,7 @@
+property_list.content:
+  path: 'property'
+  defaults:
+    _controller: '\Drupal\properties_page\Controller\PropertiesPageController::content'
+    _title: 'Property list page'
+  requirements:
+    _permission: 'access content'

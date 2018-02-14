@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: single_service_static_info
+label: 'Single service static info'
+revision: 0
+description: 'Block type with different display modes.'

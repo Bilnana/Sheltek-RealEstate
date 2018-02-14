@@ -1,0 +1,5 @@
+name: Search propeties
+description: Search for properties that are on realestate project.
+package: Custom module
+type: module
+core: 8.x

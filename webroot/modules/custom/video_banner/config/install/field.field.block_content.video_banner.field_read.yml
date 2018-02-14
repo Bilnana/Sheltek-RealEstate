@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.video_banner
+    - field.storage.block_content.field_read
+  module:
+    - link
+id: block_content.video_banner.field_read
+field_name: field_read
+entity_type: block_content
+bundle: video_banner
+label: 'Link Read More'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 1
+  title_predefined: ''
+field_type: link

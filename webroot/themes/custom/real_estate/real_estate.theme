@@ -1,0 +1,166 @@
+<?php
+
+
+
+function real_estate_form_alter(&$form, $form_state, $form_id)
+{
+
+    if ($form_id === 'user_register_form') {
+
+        $form['user_picture']['#access'] = false;
+
+        $form['timezone']['#access'] = false;
+
+        $form['contact']['#access'] = false;
+
+        $form['account']['name']['#description'] = false;
+
+
+        $form['account']['mail']['#description'] = false;
+        $form['account']['mail']['#placeholder'] = t('Email address here...');
+
+        $form['actions']['submit']['#value'] = t('Register');
+
+        $form['submit_button_1'] = array
+        (
+            '#type' => 'submit',
+            '#value' => t('Clear'),
+            '#submit' => array('real_estate_user_register_form'),
+            '#weight' => 100,
+        );
+
+        $form['field_newsltetter_and_special_of']['widget']['#title'] = false;
+        $form['field_first_name']['widget'][0]['value']['#title'] = FALSE;
+        $form['field_last_name']['widget'][0]['value']['#title'] = FALSE;
+        $form['field_phone_here']['widget'][0]['value']['#title'] = FALSE;
+        $form['field_state']['widget']['#title'] = FALSE;
+        $form['field_town_city']['widget']['#title'] = FALSE;
+        $form['field_country']['widget']['#title'] = FALSE;
+        $form['field_company_name_here']['widget'][0]['value']['#title'] = FALSE;
+
+        $form['field_country']['widget']['#options']['_none']= 'Country';
+        $form['field_state']['widget']['#options']['_none']= 'State';
+        $form['field_town_city']['widget']['#options']['_none']= 'Town/City';
+
+
+    }
+
+
+    if ($form_id === 'user_login_form') {
+        $form['actions']['submit']['#value'] = t('Login');
+
+        $form['name']['#title'] = false;
+        $form['name']['#placeholder'] = t('Email Address');
+
+        $form['pass']['#title'] = false;
+        $form['pass']['#placeholder'] = t('Password');
+
+    }
+
+    if ($form_id === 'contact_message_feedback_form') {
+        $form['subject'] = false;
+        $form['mail']['#title'] = false;
+        $form['mail']['#placeholder'] = t('Email');
+
+        $form['name']['#title'] = false;
+        $form['name']['#placeholder'] = t('Your name');
+
+
+
+        $form['actions']['submit']['#value'] = t('Submit');
+        $form['actions']['preview']['#type'] = false;
+
+
+    }
+
+    if($form_id === 'search_block_form') {
+        $form['keys']['#attributes']['placeholder'][] = t('Search');
+        $form['actions']['submit']['#value'] = '';
+    }
+
+    if($form_id === 'comment_comment_sheltek_form') {
+        $form['#prefix'] = '<h5>Leave a Comment</h5>';
+        $form['field_your_name']['widget'][0]['value']['#title'] = FALSE;
+        $form['field_your_']['widget'][0]['value']['#title'] = FALSE;
+        $form['field_write']['widget'][0]['value']['#title'] = FALSE;
+        $form['actions']['submit']['#value'] = t('Submit comment');
+    }
+
+    if($form_id === 'comment_comment_sheltek_review_form') {
+        $form['#prefix'] = '<h5>Leave a Review</h5>';
+        $form['field_your_name2']['widget'][0]['value']['#title'] = FALSE;
+        $form['field_your_email']['widget'][0]['value']['#title'] = FALSE;
+        $form['field_write_here']['widget'][0]['value']['#title'] = FALSE;
+        $form['actions']['submit']['#value'] = t('Leave review');
+    }
+
+}
+
+
+function real_estate_user_register_form_reset($form, &$form_state) {
+    $form_state['rebuild'] = FALSE;
+}
+
+
+
+
+
+function real_estate_preprocess_html(&$variables) {
+    // Add information about the number of sidebars.
+    if (!empty($variables['page']['sidebar_first']) && !empty($variables['page']['sidebar_second'])) {
+        $variables['attributes']['class'][] = 'sidebar-both';
+    }
+    elseif (!empty($variables['page']['sidebar_first'])) {
+        $variables['attributes']['class'][] = 'sidebar-one';
+    }
+    elseif (!empty($variables['page']['sidebar_second'])) {
+        $variables['attributes']['class'][] = 'sidebar-one';
+    }
+    else {
+        $variables['attributes']['class'][] = 'sidebar-none';
+    }
+}
+
+
+function real_estate_theme_suggestions_block_alter(&$suggestions, $variables) {
+    $content = $variables['elements']['content'];
+    if (isset($content['#block_content']) && $content['#block_content'] instanceof \Drupal\block_content\BlockContentInterface) {
+        $suggestions[] = 'block__' . $content['#block_content']->bundle();
+    }
+}
+
+
+function real_estate_preprocess_comment(&$variables){
+    // Getting the node creation time stamp from the comment object.
+    $date = $variables['comment']->getCreatedTime();
+    // Here you can use drupal's format_date() function, or some custom php date formatting.
+    $variables['changed'] = \Drupal::service('date.formatter')->formatInterval(REQUEST_TIME - $date);
+    $variables['submitted'] = t('@username commented !datetime', array('@username' => $variables['author'], '!datetime' => '<span class="comments-ago">' . $variables['changed'] . ' ago </span>'));
+}
+
+function real_estate_theme ( $existing, $type, $theme, $path ) {
+    return [
+        're_search' => [
+            'render element' => 'form',
+        ],
+
+    ];
+}
+
+
+function real_estate_preprocess_service_page(&$variables) {
+    $variables['url'] = $_SERVER['REQUEST_URI'];
+    $variables['#cache']['contexts'][] = 'url.path';
+}
+
+function real_estate_preprocess_node(&$variables)
+{
+    if ($variables['node']->getType() == 'property') {
+        $variables['comment_count'] = $variables['node']->get('field_leave_review')->comment_count;
+    }
+}
+
+
+
+
+

@@ -1,0 +1,33 @@
+# Theme information
+name: Real Estate
+type: theme
+base theme: classy
+description: Drupal theme files to quickly kickstart a new theme development.
+core: 8.x
+version: 1.x
+
+# Include libraries
+libraries:
+  - real_estate/global-css
+  - real_estate/global-js
+  - 'real_estate/fonts'
+
+# Regions
+regions:
+  top_page: 'Page_top'
+  primary_menu: 'Primary_menu'
+  header: 'Header'
+  content: 'Content'
+  sidebar_first: 'Sidebar first'
+  sidebar_second: 'Sidebar second'
+  featured_bottom: 'Featured bottom'
+  footer_first: 'Footer first'
+  footer_second: 'Footer second'
+  home_page_top: 'Home page top'
+  home_page_first_block: 'Home page first'
+  home_page_second_block: 'Home page second'
+  home_page_third_block: 'Home page third'
+  home_page_fourth_block: 'Home page fourth'
+  home_page_fifth_block: 'Home page fifth'
+
+

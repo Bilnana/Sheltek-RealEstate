@@ -1,0 +1,16 @@
+<?php
+function reuse_search_theme($existing, $type, $theme, $path)
+{
+    return [
+        'reuse_search' => array(
+            'render element' => 'form',
+        ),
+        'property_search' => array(
+            'render element' => 'form',
+        ),
+        'search_page_block' => array(
+            'render element' => 'form',
+        ),
+
+    ];
+}

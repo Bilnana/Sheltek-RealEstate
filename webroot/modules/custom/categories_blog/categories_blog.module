@@ -1,0 +1,13 @@
+<?php
+
+function categories_blog_theme ( $existing, $type, $theme, $path ) {
+    return [
+        'categories_blog' => array(
+            'template'  => 'categories_blog',
+            'variables' => [
+                'content'  => [],
+            ],
+        ),
+
+    ];
+}

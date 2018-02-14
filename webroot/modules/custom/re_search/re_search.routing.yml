@@ -1,0 +1,7 @@
+re_search.search_form:
+  path: '/search-page'
+  defaults:
+    _title: 'Search'
+    _form: '\Drupal\re_search\Form\SearchForm'
+  requirements:
+    _access: 'TRUE'

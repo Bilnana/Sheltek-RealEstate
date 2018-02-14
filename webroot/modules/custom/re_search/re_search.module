@@ -1,0 +1,9 @@
+<?php
+
+function re_search_theme() {
+    return [
+        're_search' => [
+            'render element' => 'children',
+        ],
+    ];
+}

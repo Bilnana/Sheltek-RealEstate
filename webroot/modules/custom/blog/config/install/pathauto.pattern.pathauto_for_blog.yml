@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: pathauto_for_blog
+label: 'pathauto for blog'
+type: 'canonical_entities:node'
+pattern: '[node:content-type]/[node:title]'
+selection_criteria:
+  7020b914-69c4-41a7-81d8-93f73f4fcfad:
+    id: node_type
+    bundles:
+      blog: blog
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 7020b914-69c4-41a7-81d8-93f73f4fcfad
+selection_logic: and
+weight: -5
+relationships: {  }

@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: image_slider
+label: 'Image slider'
+revision: 0
+description: 'This is where we put images for sliders.'

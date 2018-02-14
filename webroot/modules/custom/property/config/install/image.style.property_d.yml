@@ -1,0 +1,13 @@
+langcode: en
+status: true
+dependencies: {  }
+name: property_d
+label: 'Property d'
+effects:
+  fd84e13e-37a1-4b28-8a9b-603ae073ed7f:
+    uuid: fd84e13e-37a1-4b28-8a9b-603ae073ed7f
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 751
+      height: 385

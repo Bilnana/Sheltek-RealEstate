@@ -1,0 +1,14 @@
+
+
+{% for entry in content %}
+    <li>
+        <div class="term-item">
+            <a href="{{ entry.tid }}" ><div class="image-wraper"><img src="{{ entry.image }}"></div></a>
+                <div class="service-item-info">
+                    <h5><a href="{{ entry.tid }}" >{{ entry.name }}</a></h5>
+                    <p>{{ entry.desc }}</p>
+                </div>
+        </div>
+    </li>
+{% endfor %}
+

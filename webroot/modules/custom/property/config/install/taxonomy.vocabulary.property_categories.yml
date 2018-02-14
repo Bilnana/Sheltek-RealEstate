@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 'Property Categories'
+vid: property_categories
+description: 'Taxonomy for property.'
+hierarchy: 0
+weight: 0

@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: map
+label: Map
+revision: 0
+description: 'Map block type for contact page.'

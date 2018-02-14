@@ -1,0 +1,26 @@
+{% block feature %}
+<h5 class="main-title">Featured Property</h5>
+{% for entry in content.sale %}
+    <div class="property-wrap">
+        <div class="image-wraper bg-service">
+            <span class="for-sale">{{ entry.term }}</span>
+            <a href="{{ entry.nid }}"><img src="{{ entry.image }}"></a>
+            <div class="link-readmore">
+                <a href="{{ entry.nid }}">More Details</a>
+            </div>
+            <ul class="flat-desc">
+                <li class="area">{{ entry.area }}</li>
+                <li class="bed">{{ entry.bed }}</li>
+                <li class="bath">{{ entry.bath }}</li>
+            </ul>
+        </div>
+        <div class="property-info">
+            <h5 class="info-title"><a href="{{ entry.nid }}">{{ entry.title }}</a></h5>
+            <span class="price">{{ entry.price }}</span>
+            <p class="adress">{{ entry.address }}</p>
+        </div>
+    </div>
+{% endfor %}
+{% endblock %}
+
+

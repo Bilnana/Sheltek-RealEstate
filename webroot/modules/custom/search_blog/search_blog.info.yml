@@ -1,0 +1,5 @@
+name: Search blog
+description: Search on blog page
+type: module
+core: 8.x
+package: Custom

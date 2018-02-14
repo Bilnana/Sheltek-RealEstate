@@ -1,0 +1,45 @@
+# Global CSS files
+global-css:
+  version: 1.x
+  css:
+    theme:
+      assets/stylesheets/vendor/meanmenu.css:
+       minified: false
+      assets/stylesheets/vendor/background-video.css:
+       minified: true
+      assets/stylesheets/vendor/jquery-ui.css:
+       minified: false
+      assets/stylesheets/vendor/flexslider.css:
+       minified: false
+      assets/stylesheets/vendor/lightbox.css:
+       minified: false
+      assets/stylesheets/application.css:
+       minified: false
+      assets/stylesheets/vendor/font-awesome/css/font-awesome.css:
+       minified: false
+
+# Global JS files
+global-js:
+  version: 1.x
+  js:
+    assets/scripts/vendor/jquery.meanmenu.js:
+      minified: false
+    assets/scripts/vendor/video-background.js:
+      minified: true
+    assets/scripts/vendor/jquery-ui.js:
+      minified: false
+    assets/scripts/vendor/jquery.flexslider.js:
+      minified: false
+    assets/scripts/vendor/lightbox.js:
+      minified: false
+    assets/scripts/application.js:
+      minified: false
+  dependencies:
+    - core/jquery
+    - core/jquery.once
+
+fonts:
+  css:
+    theme:
+      'https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700': { type: external, minified: true }
+      'https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700': { type: external, minified: true }

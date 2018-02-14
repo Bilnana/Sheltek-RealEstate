@@ -1,0 +1,79 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.property.body
+    - field.field.node.property.field_address
+    - field.field.node.property.field_amenities
+    - field.field.node.property.field_area
+    - field.field.node.property.field_bathroom
+    - field.field.node.property.field_bedroom
+    - field.field.node.property.field_condition
+    - field.field.node.property.field_feedback_property
+    - field.field.node.property.field_garage
+    - field.field.node.property.field_kitchen
+    - field.field.node.property.field_leave_review
+    - field.field.node.property.field_location
+    - field.field.node.property.field_price
+    - field.field.node.property.field_property_category
+    - field.field.node.property.field_property_image
+    - node.type.property
+  module:
+    - image
+    - text
+    - user
+id: node.property.default
+targetEntityType: node
+bundle: property
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_amenities:
+    weight: 3
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_condition:
+    weight: 2
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_property_image:
+    weight: 1
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  addtoany: true
+  field_address: true
+  field_area: true
+  field_bathroom: true
+  field_bedroom: true
+  field_feedback_property: true
+  field_garage: true
+  field_kitchen: true
+  field_leave_review: true
+  field_location: true
+  field_price: true
+  field_property_category: true

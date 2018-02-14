@@ -1,0 +1,11 @@
+name: 'Block type service +display modes'
+description: 'Block type services for static information, this feature giving it a more dynamic point of view. +Display modes '
+type: module
+core: 8.x
+dependencies:
+  - block_content
+  - field
+  - file
+  - image
+  - text
+version: ' 8.x-1.0'

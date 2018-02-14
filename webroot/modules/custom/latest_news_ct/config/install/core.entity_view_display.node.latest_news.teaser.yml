@@ -1,0 +1,40 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.latest_news.field_latest_text
+    - field.field.node.latest_news.field_news_image
+    - node.type.latest_news
+  module:
+    - image
+    - text
+    - user
+id: node.latest_news.teaser
+targetEntityType: node
+bundle: latest_news
+mode: teaser
+content:
+  field_latest_text:
+    type: text_trimmed
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      trim_length: 250
+    third_party_settings: {  }
+  field_news_image:
+    type: image
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+  links:
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

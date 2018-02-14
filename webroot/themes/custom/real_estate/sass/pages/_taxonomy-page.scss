@@ -1,0 +1,68 @@
+//**Block some single service
+#block-singleservice{
+  overflow: hidden;
+  padding-left:13px;
+  padding-right:13px;
+
+  .service-img{
+    float: right;
+    width:50%;
+    img{
+      width:100%;
+      height:auto;
+    }
+  }
+  .service-text{
+    display:  inline-block;
+    width: 50%;
+    p{
+      color: #606060;
+      font-family: "Montserrat";
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 24px;
+      margin-bottom: 15px;
+    }
+    h3{
+      font-family: 'Raleway', sans-serif;
+      color: #1f223e;
+      margin-top: 0;
+      font-size: 26px;
+      font-weight: 600;
+      line-height: 28px;
+      margin-top:0;
+      margin-bottom:0;
+    }
+    h2{
+      font-family: 'Raleway', sans-serif;
+      color: #1f223e;
+      font-weight: 700;
+      margin-top:0;
+      margin-bottom:0.83em;
+    }
+    .about-sheltek-info{
+
+    }
+
+  }
+}
+
+/************* RESPONSIVE ****************/
+@media (max-width: $screen-sm) and (min-width: 320px) {
+  #block-singleservice{
+    margin-top: 80px;
+    overflow: hidden;
+    padding-left: 0;
+    padding-right: 0;
+
+    .service-img{
+      float: none;
+      height: auto;
+      width: 100%;
+    }
+    .service-text {
+      display: block;
+      width: 100%;
+    }
+  }
+}

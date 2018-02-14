@@ -1,0 +1,24 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.take_a_look
+    - field.storage.block_content.field_videoblock
+  module:
+    - video_embed_field
+id: block_content.take_a_look.field_videoblock
+field_name: field_videoblock
+entity_type: block_content
+bundle: take_a_look
+label: 'VIdeo block'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_providers:
+    youtube: youtube
+    vimeo: vimeo
+    youtube_playlist: '0'
+field_type: video_embed_field

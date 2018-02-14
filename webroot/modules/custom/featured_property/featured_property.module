@@ -1,0 +1,13 @@
+<?php
+
+function featured_property_theme ( $existing, $type, $theme, $path ) {
+    return [
+        'featured_property' => array(
+            'template'  => 'featured_property',
+            'variables' => [
+                'content'  => [],
+            ],
+        ),
+
+    ];
+}

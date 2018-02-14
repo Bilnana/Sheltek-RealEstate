@@ -1,0 +1,9 @@
+<div class="row">
+    {% for entry in content %}
+        {% if entry is iterable %}
+            <div class="col-md-6">
+                <h6>{{ entry.nid }}</h6>
+            </div>
+        {% endif %}
+    {% endfor %}
+</div>

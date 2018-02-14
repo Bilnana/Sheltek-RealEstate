@@ -1,0 +1,21 @@
+name: Blog
+description: 'Content type blog'
+type: module
+core: 8.x
+dependencies:
+  - blog_categories
+  - comment
+  - ctools
+  - datetime
+  - field
+  - file
+  - image
+  - link
+  - menu_ui
+  - node
+  - path
+  - pathauto
+  - taxonomy
+  - text
+  - user
+version: ' 8.x-1.4'

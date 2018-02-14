@@ -1,0 +1,222 @@
+
+#block-real-estate-local-tasks{
+  visibility: hidden;
+  margin-top:80px;
+}
+.form-required{
+  display: none;
+}
+//**User login block
+#block-userlogin {
+  display: inline-block;
+  width: 48%;
+  margin-top: -10px;
+  position: relative;
+  padding-left:15px;
+  h5{
+    position: absolute;
+    top:-94px;
+    @include h5;
+    text-transform: uppercase;
+    color: $navigation;
+    margin:0;
+  }
+  p{
+    position: absolute;
+    top:-40px !important;
+    @include p-content;
+  }
+  .user-login-form {
+    input[type="text"],input[type="password"]{
+      background: transparent;
+      border: 1px solid #e1e1e1;
+      color: #606060;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 14px;
+      font-weight: 300;
+      height: 40px;
+      margin-bottom: -7;
+      padding: 0 10px;
+      width: 100%;
+    }
+    .form-actions{
+      .form-submit{
+        @include submit-button;
+        margin-top: 45px;
+      }
+      .form-submit:hover{
+        background:$navigation;
+      }
+    }
+  }
+  .item-list{
+    display: none;
+  }
+}
+
+//
+//**User register block
+.user-register-form{
+  display: inline-block;
+  width: 48.5%;
+  float: right;
+  height: auto;
+  @include clearfix;
+  margin-bottom: 117px;
+  margin-top: -50px;
+  position: relative;
+  h5{
+    position: absolute;
+    top:-54px;
+    left: 0;
+    @include h5;
+    text-transform: uppercase;
+    color: $navigation;
+    margin:0;
+  }
+
+  .field--name-field-first-name{
+    width: 47%;
+    display: inline-block;
+    float: left;
+    input[type="text"]{
+      @include input-login;
+    }
+  }
+  .field--name-field-last-name{
+    @include sort-input-login;
+    float: right;
+    input[type="text"]{
+      @include input-login;
+    }
+  }
+  .field--name-field-country{
+    #edit-field-country{
+      float: left;
+      @include input-login;
+      @include sort-input-login;
+      @include margin-login-input;
+    }
+  }
+
+  #edit-field-state{
+    @include input-login;
+    @include sort-input-login;
+    float: right;
+    @include margin-login-input;
+  }
+  #edit-field-town-city{
+    float: left;
+    @include input-login;
+    @include sort-input-login;
+    @include margin-login-input;
+  }
+  .form-tel{
+    @include input-login;
+    @include sort-input-login;
+    float: right;
+    @include margin-login-input;
+  }
+  #edit-field-company-name-here-0-value,#edit-mail,#edit-name{
+    @include input-login;
+  }
+  .form-item-field-newsltetter-and-special-of-sign-up-for-our-newsletter{
+    width: 47%;
+    float: left;
+    color: #999999;
+    font-size:12px;
+    line-height:27px;
+    font-weight:600;
+  }
+  .form-item-field-newsltetter-and-special-of-receive-special-offers-from-our-partners{
+    width: 47%;
+    display: inline-block;
+    color:#999999;
+    font-size:12px;
+    line-height:27px;
+    font-weight:600;
+  }
+  //**register button
+  #edit-submit{
+    float: left;
+    display: inline-block;
+    @include submit-button;
+  }
+  #edit-submit-button-1{
+    float: right;
+    display: inline-block;
+    @include submit-button;
+    margin:0;
+  }
+}
+
+
+@media (max-width: $screen-xs) and (min-width: 320px) {
+  #block-userlogin {
+    display: block;
+    width: 100%;
+    margin-top: -10px;
+    position: relative;
+    padding-left: 15px;
+    h5{
+      top: 636px;
+    }
+    p{
+      top: 640px !important;
+    }
+  }
+  .user-register-form{
+    display: inline-block;
+    width: 100%;
+    float: right;
+    height: auto;
+    @include clearfix;
+    margin-bottom: 117px;
+    margin-top: -50px;
+    position: relative;
+    .field--name-field-first-name{
+      width: 100%;
+      display: block;
+      float: none;
+    }
+    .field--name-field-last-name{
+      width: 100%;
+      display: block;
+      float: none;
+      input[type="text"]{
+        @include input-login;
+      }
+    }
+    .field--name-field-country{
+      #edit-field-country{
+        width: 100%;
+        display: block;
+        float: none;
+        @include input-login;
+       margin:0;
+      }
+    }
+
+    #edit-field-state{
+      @include input-login;
+      width: 100%;
+      display: block;
+      float: none;
+      margin:0;
+    }
+    #edit-field-town-city{
+     margin:0;
+      @include input-login;
+      width: 100%;
+      display: block;
+      float: none;
+    }
+    .form-tel{
+      @include input-login;
+      width: 100%;
+      display: block;
+      float: none;
+      margin:0;
+    }
+  }
+  }

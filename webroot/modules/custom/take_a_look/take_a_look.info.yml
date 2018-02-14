@@ -1,0 +1,10 @@
+name: 'Take a look'
+description: 'Block type take a look'
+type: module
+core: 8.x
+dependencies:
+  - block_content
+  - field
+  - text
+  - video_embed_field
+version: 8.x-1.1

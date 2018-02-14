@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: pathauto_for_property
+label: 'Pathauto for property'
+type: 'canonical_entities:node'
+pattern: '[node:content-type]/[node:title]'
+selection_criteria:
+  0a8998cd-4011-4207-a131-019d64ca28e8:
+    id: node_type
+    bundles:
+      property: property
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 0a8998cd-4011-4207-a131-019d64ca28e8
+selection_logic: and
+weight: -5
+relationships: {  }

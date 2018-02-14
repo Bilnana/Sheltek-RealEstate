@@ -1,0 +1,12 @@
+name: 'Video Banner'
+description: 'Block type video banner.'
+type: module
+core: 8.x
+dependencies:
+  - block_content
+  - field
+  - file
+  - image
+  - link
+  - video_embed_field
+version: 8.x-1.5

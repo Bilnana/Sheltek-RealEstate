@@ -1,0 +1,65 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.get_in_touch
+    - field.field.block_content.get_in_touch.field_email
+    - field.field.block_content.get_in_touch.field_location
+    - field.field.block_content.get_in_touch.field_telephone
+    - field.field.block_content.get_in_touch.field_telephone1
+    - field.field.block_content.get_in_touch.field_web
+  module:
+    - link
+    - telephone
+id: block_content.get_in_touch.default
+targetEntityType: block_content
+bundle: get_in_touch
+mode: default
+content:
+  field_email:
+    weight: 30
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: email_default
+    region: content
+  field_location:
+    weight: 26
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_telephone:
+    weight: 28
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: telephone_default
+    region: content
+  field_telephone1:
+    weight: 29
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: telephone_default
+    region: content
+  field_web:
+    weight: 31
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

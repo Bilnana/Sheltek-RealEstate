@@ -1,0 +1,5 @@
+name: Route changer
+description: Module for chaningin a route for login and registration
+core: 8.x
+type: module
+package: Custom module

@@ -1,0 +1,7 @@
+name: Amenities
+description: 'Taxonomy for property content type.'
+type: module
+core: 8.x
+dependencies:
+  - taxonomy
+version: 8.x-1.0

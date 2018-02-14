@@ -1,0 +1,49 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.property.body
+    - field.field.node.property.field_address
+    - field.field.node.property.field_amenities
+    - field.field.node.property.field_area
+    - field.field.node.property.field_bathroom
+    - field.field.node.property.field_bedroom
+    - field.field.node.property.field_condition
+    - field.field.node.property.field_garage
+    - field.field.node.property.field_kitchen
+    - field.field.node.property.field_price
+    - field.field.node.property.field_property_category
+    - field.field.node.property.field_property_image
+    - node.type.property
+  module:
+    - text
+    - user
+id: node.property.teaser
+targetEntityType: node
+bundle: property
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_address: true
+  field_amenities: true
+  field_area: true
+  field_bathroom: true
+  field_bedroom: true
+  field_condition: true
+  field_garage: true
+  field_kitchen: true
+  field_price: true
+  field_property_category: true
+  field_property_image: true

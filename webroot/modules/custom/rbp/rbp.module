@@ -1,0 +1,13 @@
+<?php
+
+function rbp_theme ( $existing, $type, $theme, $path ) {
+    return [
+        'rbp' => array(
+            'template'  => 'rbp',
+            'variables' => [
+                'content'  => [],
+            ],
+        ),
+
+    ];
+}

@@ -1,0 +1,38 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.take_a_look
+    - field.field.block_content.take_a_look.field_t
+    - field.field.block_content.take_a_look.field_videoblock
+  module:
+    - text
+    - video_embed_field
+id: block_content.take_a_look.default
+targetEntityType: block_content
+bundle: take_a_look
+mode: default
+content:
+  field_t:
+    weight: 27
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textfield
+    region: content
+  field_videoblock:
+    weight: 26
+    settings: {  }
+    third_party_settings: {  }
+    type: video_embed_field_textfield
+    region: content
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

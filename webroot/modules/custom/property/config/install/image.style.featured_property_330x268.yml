@@ -1,0 +1,13 @@
+langcode: en
+status: true
+dependencies: {  }
+name: featured_property_330x268
+label: 'featured property 330x268'
+effects:
+  787fe55c-d4d2-4071-b8be-09edd093cea4:
+    uuid: 787fe55c-d4d2-4071-b8be-09edd093cea4
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 330
+      height: 212

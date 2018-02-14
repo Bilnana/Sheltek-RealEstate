@@ -1,0 +1,4 @@
+name: Deploy module
+description: 'Install, update and uninstall functions for modules.'
+type: module
+core: 8.x

@@ -1,0 +1,18 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: stefan
+ * Date: 7.12.17.
+ * Time: 09.29
+ */
+function service_page_theme(){
+    return [
+        'service_page' => array(
+            'template' => 'service_page',
+            'variables' => [
+                'content' => [],
+            ],
+        ),
+
+    ];
+}

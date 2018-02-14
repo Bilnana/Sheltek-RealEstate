@@ -1,0 +1,5 @@
+excluded:
+  - comment.type.comment_sheltek
+  - core.entity_form_display.comment.comment_sheltek.default
+  - core.entity_view_display.comment.comment_sheltek.default
+required: true

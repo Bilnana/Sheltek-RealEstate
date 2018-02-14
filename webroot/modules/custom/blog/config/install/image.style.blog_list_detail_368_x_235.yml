@@ -1,0 +1,13 @@
+langcode: en
+status: true
+dependencies: {  }
+name: blog_list_detail_368_x_235
+label: 'blog list detail (368 x 235)'
+effects:
+  11350f50-36fb-43f2-9767-ec12ef2a3c83:
+    uuid: 11350f50-36fb-43f2-9767-ec12ef2a3c83
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 368
+      height: 235

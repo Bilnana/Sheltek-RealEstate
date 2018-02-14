@@ -1,0 +1,32 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.image_slider
+    - field.field.block_content.image_slider.body
+    - field.field.block_content.image_slider.field_image_slide
+  module:
+    - image
+    - text
+id: block_content.image_slider.default
+targetEntityType: block_content
+bundle: image_slider
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_image_slide:
+    weight: 1
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+hidden: {  }

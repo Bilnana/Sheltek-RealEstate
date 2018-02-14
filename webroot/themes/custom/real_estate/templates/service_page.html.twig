@@ -1,0 +1,37 @@
+<div class = "section-title-2 text-center">
+    {% if '/service/single-service?tid=6' in url %}
+        <h2>Property For Sale</h2>
+    {% elseif '/service/single-service?tid=7' in url%}
+        <h2>Property For Rent</h2>
+    {% elseif '/service/single-service?tid=8' in url%}
+        <h2>Buy Property</h2>
+    {% elseif '/service/single-service?tid=9' in url%}
+        <h2>Property Managed</h2>
+    {% endif %}
+    <p>Sheltek is the best theme for  elit, sed do eiusmod tempor dolor sit amet, conse ctetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et lorna aliquatd minim veniam, quis nostrud</p>
+</div>
+<div class = "property-sale">
+    {% for entry in content.sale %}
+        <div class="item-wrap">
+            <div class="image-wraper bg-service">
+                <a href="{{ entry.nid }}"><img src="{{ entry.image }}"></a>
+                <div class="link-readmore">
+                    <a href="{{ entry.nid }}">More Details</a>
+                </div>
+                <ul class="flat-desc">
+                    <li class="area">{{ entry.area }}</li>
+                    <li class="bed">{{ entry.bed }}</li>
+                    <li class="bath">{{ entry.bath }}</li>
+                </ul>
+            </div>
+            <div class="property-info">
+                   <h5><a href="{{ entry.nid }}">{{ entry.title }}</a></h5>
+                    <span class="price">{{ entry.price }}</span>
+                    <p class="adress">{{ entry.address }}</p>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+
+
+

@@ -1,0 +1,9 @@
+name: 'Map feature'
+description: 'Map block type for map on contact.'
+type: module
+core: 8.x
+dependencies:
+  - block_content
+  - field
+  - simple_gmap
+version: 8.x-1.0

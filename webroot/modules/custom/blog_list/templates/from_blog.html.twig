@@ -1,0 +1,24 @@
+<div class="our-services">
+    <div class="section-title">
+        <h2>FROM BLOG</h2>
+        <p>Sheltek is the best theme for  elit, sed do eiusmod tempor dolor sit amet, conse ctetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et lorna aliquatd minim veniam, quis nostrud</p>
+    </div>
+</div>
+<div class="blog-list-wraper">
+    {% for entry in content %}
+        <div class="blog-item-wraper">
+            <div class = "blog-item">
+                <a href ="{{ entry.nid }}"><div class="image-wraper"><img src="{{ entry.image }}"/></div></a>
+                <div class="blog-title-date">
+                    <h5><a href ="{{ entry.nid }}">{{ entry.title }}</a></h5>
+                    <p class="blog-date">{{ entry.date }}</p>
+                </div>
+                <div class="blog-info">
+                    <p class="blog-body">{{ entry.body }}</p>
+                    <a class = "read-more" href = "{{ entry.nid }}">Read more</a>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+

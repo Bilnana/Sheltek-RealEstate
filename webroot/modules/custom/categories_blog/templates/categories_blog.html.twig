@@ -1,0 +1,6 @@
+<h5>Categories</h5>
+{% for entry in content %}
+    <ul class="blog-categories-list">
+        <li><a href="{{ entry.name }}">{{ entry.na }} <span>{{ entry.count }}</span></a></li>
+    </ul>
+{% endfor %}

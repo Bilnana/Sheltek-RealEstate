@@ -1,0 +1,7 @@
+service_cat.content:
+  path: 'service'
+  defaults:
+    _controller: '\Drupal\service_cat\Controller\ServiceCatController::content'
+    _title: 'Service'
+  requirements:
+    _permission: 'access content'

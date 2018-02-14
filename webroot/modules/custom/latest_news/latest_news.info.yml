@@ -1,0 +1,4 @@
+name: Latest news
+description: Block for listing content type
+type: module
+core: 8.x

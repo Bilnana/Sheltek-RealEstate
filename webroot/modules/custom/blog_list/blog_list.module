@@ -1,0 +1,19 @@
+<?php
+
+function blog_list_theme(){
+    return [
+        'blog_list' => array(
+            'template' => 'blog_list',
+            'variables' => [
+                'content' => [],
+            ],
+        ),
+        'from_blog' => array(
+            'template' => 'from_blog',
+            'variables' => [
+                'content' => [],
+            ],
+        ),
+
+    ];
+}

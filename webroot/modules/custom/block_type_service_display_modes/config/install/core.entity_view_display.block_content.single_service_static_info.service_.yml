@@ -1,0 +1,52 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.single_service_static_info
+    - core.entity_view_mode.block_content.service_
+    - field.field.block_content.single_service_static_info.body
+    - field.field.block_content.single_service_static_info.field_heading_h2
+    - field.field.block_content.single_service_static_info.field_heading_h3
+    - field.field.block_content.single_service_static_info.field_image_service
+    - image.style.image_service_561x408_
+  module:
+    - image
+    - text
+id: block_content.single_service_static_info.service_
+targetEntityType: block_content
+bundle: single_service_static_info
+mode: service_
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_heading_h2:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_heading_h3:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_image_service:
+    weight: 3
+    label: hidden
+    settings:
+      image_style: image_service_561x408_
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+hidden: {  }

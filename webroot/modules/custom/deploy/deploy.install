@@ -1,0 +1,179 @@
+<?php
+
+/**
+ * @deploy
+ * Install, update and uninstall functions for modules.
+ */
+function deploy_update_8421(){
+    \Drupal::service('module_installer')->install(['rbp']);
+}
+
+function deploy_update_8422(){
+    \Drupal::service('module_installer')->install(['rbp']);
+}
+
+/**
+ * Installing search blog module for blog pages.
+ */
+function deploy_update_8423(){
+    \Drupal::service('module_installer')->install(['search_blog']);
+}
+
+/**
+ * Installing search blog module for blog pages.
+ */
+function deploy_update_8424(){
+    \Drupal::service('module_installer')->install(['categories_blog']);
+}
+
+/**
+ * Some finally changes to this module categories_blog.
+ */
+function deploy_update_8425(){
+    \Drupal::service('module_installer')->install(['categories_blog']);
+}
+
+/**
+ * Installing archive block for blog detail page.
+ */
+function deploy_update_8426(){
+    \Drupal::service('module_installer')->install(['blog_archive']);
+}
+
+/**
+ * Update archive block for blog detail page.
+ */
+function deploy_update_8427(){
+    \Drupal::service('module_installer')->install(['blog_archive']);
+}
+
+/**
+ * Update archive block for blog detail, block need to list only 5 months,
+ */
+function deploy_update_8428(){
+    \Drupal::service('module_installer')->install(['blog_archive']);
+}
+
+/**
+ * Installing module for service page.
+ */
+function deploy_update_8429(){
+    \Drupal::service('module_installer')->install(['service_page']);
+}
+
+/**
+ * Property list page (Probably result page)
+ */
+function deploy_update_84210(){
+    \Drupal::service('module_installer')->install(['properties_page']);
+}
+
+/**
+ * Instaling gmap module and map feture block type for making contact page alive.
+ */
+function deploy_update_84211(){
+    \Drupal::service('module_installer')->install(['simple_gmap']);
+    \Drupal::service('module_installer')->install(['map_feature']);
+}
+
+/**
+ * Update module for service page.
+ */
+function deploy_update_84212(){
+    \Drupal::service('module_installer')->install(['service_page']);
+}
+
+/**
+ * Installing module block featured property
+ */
+function deploy_update_84213(){
+    \Drupal::service('module_installer')->install(['featured_property']);
+}
+
+/**
+ * Added block type take a look
+ */
+function deploy_update_84214(){
+    \Drupal::service('module_installer')->install(['take_a_look']);
+}
+
+/**
+ * Installing addtoany module for share, some updates on blog content type and adding custom comment type.
+ */
+function deploy_update_84215(){
+    \Drupal::service('module_installer')->install(['addtoany']);
+//    \Drupal::service('module_installer')->install(['blog']);
+
+}
+
+/**
+ * New block for taxonomy properties categories.
+ */
+function deploy_update_84220()
+{
+    \Drupal::service('module_installer')->install(['term_block']);
+
+}
+
+/**
+ * New block for taxonomy properties categories.
+ */
+function deploy_update_84221()
+{
+    \Drupal::service('module_installer')->install(['partner_slider']);
+
+}
+
+
+/**
+ * New modules for search evreything for search.
+ */
+function deploy_update_84222()
+{
+    \Drupal::service('module_installer')->install(['cshs']);
+    \Drupal::service('module_installer')->install(['property']);
+    \Drupal::service('module_installer')->install(['re_search']);
+    \Drupal::service('module_installer')->install(['reuse_search']);
+
+}
+
+/**
+ * Super module for twig features, save hair.
+ */
+function deploy_update_84223()
+{
+    \Drupal::service('module_installer')->install(['twig_blocks']);
+
+}
+
+/**
+ * +1 Page for all services.
+ */
+function deploy_update_84224()
+{
+    \Drupal::service('module_installer')->install(['service_cat']);
+
+}
+
+
+/**
+ * Some updates for comments and some changes to content type property.
+ */
+function deploy_update_84225()
+{
+    \Drupal::service('module_installer')->install(['property']);
+    \Drupal::service('module_installer')->install(['comment_type_sheltek_review']);
+
+}
+
+
+/**
+ * Some updates for comments and some changes to content type property.
+ */
+function deploy_update_84226()
+{
+    \Drupal::service('module_installer')->install(['route_change']);
+
+}
+
+

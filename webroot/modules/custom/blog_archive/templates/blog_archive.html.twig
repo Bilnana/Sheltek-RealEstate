@@ -1,0 +1,7 @@
+<h5>Archive</h5>
+{{ devel_breakpoint() }}
+<ul class="blog-categories-list">
+{% for entry in content %}
+   <li><a href="/archive{{ entry.url }}">{{ entry.date }}</a></li>
+{% endfor %}
+</ul>

@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_latest_text
+    - node.type.latest_news
+  module:
+    - text
+id: node.latest_news.field_latest_text
+field_name: field_latest_text
+entity_type: node
+bundle: latest_news
+label: 'Latest text'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+field_type: text_with_summary

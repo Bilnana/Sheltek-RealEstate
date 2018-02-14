@@ -1,0 +1,15 @@
+<h5 class="main-title">Recent Post</h5>
+{% for entry in content %}
+    <div class="post-wrap">
+        <div class="image-wrap">
+            <a href ="{{ entry.nid }}"><img src="{{ entry.image }}"/></a>
+        </div>
+        <div class="block-title-date">
+            <h5><a href ="{{ entry.nid }}">{{ entry.title }}</a></h5>
+            <p>{{ entry.date }}</p>
+        </div>
+        <div class = "block-body">
+           <p>{{ entry.body }}</p>
+        </div>
+    </div>
+{% endfor %}

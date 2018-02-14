@@ -1,0 +1,17 @@
+name: Property
+description: 'Provides Property content type and related configuration. Use property for adding content that is for selling or rent.'
+type: module
+core: 8.x
+dependencies:
+  - comment
+  - field
+  - file
+  - image
+  - menu_ui
+  - node
+  - path
+  - pathauto
+  - taxonomy
+  - text
+  - user
+version: 8.x-1.4

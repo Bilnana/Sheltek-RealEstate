@@ -1,0 +1,243 @@
+
+.contact-section{
+  vertical-align: top;
+  padding-left:15px;
+  padding-right:15px;
+  margin-bottom:113px;
+  //**Contact message form
+  @include clearfix;
+  .wrap-contact-form{
+    position: relative;
+    display: inline-block;
+    float: right;
+    width: 57%;
+    height: 530px;
+    padding: 50px;
+    background-image: url("../images/layout/contact.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+    z-index:0;
+  }
+  .wrap-contact-form:after{
+    background: #fff none repeat scroll 0 0;
+    content: "";
+    height: 100%;
+    left: 0;
+    opacity: 0.4;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+  }
+  .contact-message-feedback-form:before{
+    content:'Leave a Message';
+    z-index:100;
+    @include h5;
+  }
+  .contact-message-feedback-form{
+    z-index:100;
+    .form-required{
+      display: none;
+    }
+    .form-type-textfield{
+      margin:40px auto 22px;
+      width:100%;
+      input[type="text"]{
+        height: 39px;
+        width:100%;
+        @include input-textaria;
+      }
+    }
+    .form-type-email{
+      margin:22px auto;
+      width:100%;
+      input[type="email"]{
+        width:100%;
+        height:39px;
+        @include input-textaria;
+      }
+    }
+    .form-type-textarea{
+      width:100%;
+      margin:21px auto;
+      .form-textarea{
+        @include input-textaria;
+        height: 183px;
+      }
+    }
+    .form-actions{
+      width:100%;
+      margin:23px auto;
+    }
+    .form-submit{
+     @include submit-button;
+      margin-top: 5px;
+    }
+    .form-submit:hover{
+      background:$navigation;
+    }
+  }
+
+  #block-getintouch{
+    display: inline-block;
+    float: left;
+    width:40%;
+    a{
+      color: #606060;
+      text-decoration: none;
+    }
+    .section-title{
+      margin-botton:40px;
+      h2{
+        font-family: 'Raleway', sans-serif;
+        color: $navigation;
+        font-weight: 700;
+        margin-top: 0;
+        margin-bottom: 1em;
+      }
+      h3{
+        font-family: 'Raleway', sans-serif;
+        color: $navigation;
+        margin:0;
+      }
+    }
+
+   .contact-des{
+     p{
+       color: #606060;
+       font-size: 14px;
+       font-weight: 500;
+       line-height: 23px;
+       margin-bottom: 15px;
+     }
+   }
+    .content{
+      margin-top:50px;
+    }
+    .field--name-field-location{
+      color: #606060;
+      display: inline-block;
+      margin-bottom: 18px;
+      width:45%;
+      @include p-contact-page;
+    }
+    .field--name-field-location:before{
+      content: url("../images/icons/location.png");
+      margin-right: 20px;
+      display: inline-block;
+      float: left;
+      padding-top: 2.5px;
+    }
+    .field--name-field-location:after{
+      content:'';
+      border-bottom: 1px solid #ccc;
+      display: block;
+      padding-top:20px;
+      width: 60%;
+    }
+
+    .telephone-box{
+      color: #606060;
+      margin-bottom: 19px;
+      width:45%;
+      .field__label{
+        @include p-contact-page;
+      }
+      .field__item{
+        a{
+          @include p-contact-page;
+        }
+      }
+    }
+    .telephone-box:before{
+      content: url("../images/icons/phone-footer.png");
+      margin-right: 10px;
+      display: inline-block;
+      float: left;
+      padding-top: 6px;
+    }
+    .telephone-box:after{
+      content:'';
+      border-bottom: 1px solid #ccc;
+      display: block;
+      padding-top:20px;
+      width: 60%;
+    }
+    .email-box{
+      color: #606060;
+      margin-bottom: 30px;
+      width:45%;
+      .field__label{
+        @include p-contact-page;
+      }
+      .field__item{
+        a{
+          @include p-contact-page;
+        }
+      }
+    }
+    .email-box:before{
+      content: url("../images/icons/world.png");
+      margin-right: 10px;
+      display: inline-block;
+      float: left;
+      padding-top: 6px;
+    }
+  }
+}
+
+#block-mapa{
+  display: block;
+  width:100%;
+  height:542px;
+  iframe{
+    width:100%;
+    height:542px;
+  }
+}
+
+@media (max-width: $screen-sm) and (min-width: 320px) {
+  .contact-section{
+    .wrap-contact-form{
+      width:100%;
+      display: block;
+      float: none;
+      height: auto;
+      padding: 15px;
+    }
+    .contact-message-feedback-form{
+      width:95%;
+    }
+    #block-getintouch{
+      display:block;
+      float: none;
+      width:100%;
+      margin-top: 30px;
+      .section-title{
+        text-align: center;
+      }
+      .content{
+        margin-top:50px;
+      }
+      .field--name-field-location{
+        color: #606060;
+        display: block;
+        margin-bottom: 18px;
+        width:100%;
+        @include p-contact-page;
+      }
+      .telephone-box{
+        color: #606060;
+        margin-bottom: 20px;
+        width:100%;
+      }
+      .email-box{
+        color: #606060;
+        margin-bottom: 30px;
+        width:100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,37 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.comment_sheltek
+    - field.field.comment.comment_sheltek.field_write
+    - field.field.comment.comment_sheltek.field_your_
+    - field.field.comment.comment_sheltek.field_your_name
+id: comment.comment_sheltek.default
+targetEntityType: comment
+bundle: comment_sheltek
+mode: default
+content:
+  field_write:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_your_:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: email_mailto
+    region: content
+  field_your_name:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  links: true

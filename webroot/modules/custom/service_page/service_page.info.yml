@@ -1,0 +1,5 @@
+name: Service page
+description: Page that shows property content that is on sale.
+package: Custom module
+type: module
+core: 8.x
